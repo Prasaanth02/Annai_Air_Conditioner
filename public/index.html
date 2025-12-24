@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Annai AC Works — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iin hnter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../src/css/style.css">
+
+</head>
+<body>
+<div class="fixed-bg"></div>
+<header class="header">
+  <div class="container nav">
+    <div class="brand">
+      <img src="../assets/icons/logo.jpg" alt="Annai AC Works logo">
+    </div>
+    <nav class="navlinks" aria-label="Main navigation" style="gap:32px" id="navMenu">
+      <a href="../public/index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="../public/gallery.html">Gallery</a>
+      <a href="../public/reviews.html">Reviews</a>
+      <a href="../public/contact.html">Contact</a>
+    </nav>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      ☰
+    </button>
+  </div>
+</header>
+
+<main class="container" id="home">
+  <section class="hero glass-section">
+    <div class="hero-content">
+      <h1>Annai Air Conditioner</h1>
+      <p class="hero-description">Professional AC installation, repair, and maintenance services for homes and businesses. Expert technicians, reliable solutions, and guaranteed comfort all year round.</p>
+    </div>
+    <div class="hero-form-card">
+      <h3>Quick Book — Free Phone Diagnosis</h3>
+      <form id="quickBook">
+        <input class="form-input" type="text" name="name" placeholder="Your Name" required>
+        <input class="form-input" type="tel" name="phone" placeholder="Your Phone" required>
+        <select class="form-input" name="service" required>
+          <option value="">Select a Service</option>
+          <option value="installation">AC Installation</option>
+          <option value="repair">AC Repair</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="gas-refill">Gas Refilling</option>
+        </select>
+        <div class="form-buttons">
+          <button class="btn-book" type="submit">Book Now</button>
+          <button class="btn-reset" type="button" onclick="document.getElementById('quickBook').reset()">Reset</button><br><br>
+        </div>
+      </form>
+       <center><p>fast, Reliable AC Service — Quick Fixes. Long-Lasting Cooling.</p></center>
+    </div>
+  </section>
+
+  <section class="section" id="book">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+      <div class="info-item">
+        <h4>Working Hours</h4>
+        <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: Emergency only</p>
+      </div>
+      <div class="info-item">
+        <h4>Inspection Charges</h4>
+        <p>Starting at ₹399<br>Includes phone diagnosis & onsite quote</p>
+      </div>
+      <div class="info-item">
+        <h4>Contact</h4>
+        <p>Call: +91 99001 12233<br>WhatsApp: +91 99001 12233</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section glass-section" id="about">
+    <h2 style="text-align:center;margin-bottom:40px;font-size:32px">About Us</h2>
+    <div class="about-container">
+      <div class="about-content">
+        <h3>Annai Air Conditioner</h3>
+        <p>Annai Air Conditioner is a trusted provider of air conditioning installation, servicing, and maintenance solutions for homes and businesses. We focus on delivering reliable cooling, professional workmanship, and long-lasting performance tailored to customer needs.</p>
+        <p>With experienced technicians and a commitment to quality, we handle everything from new AC installations and gas refilling to deep cleaning, repair, and annual maintenance contracts. Every service is carried out using standard tools, safety guidelines, and industry best practices.</p>
+        <p>Our goal is simple: to ensure comfort, energy efficiency, and peace of mind for our customers through dependable and transparent service.</p>
+      </div>
+      <div class="about-image">
+        <img src="../assets/img1.jpg" alt="AC Service" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section services-section glass-section" id="services">
+    <h2 style="text-align:center;margin-bottom:40px;font-size:32px">Why Choose Us</h2>
+    <div class="about-container">
+      <div class="about-content">
+        <h3>Trusted Local Expertise</h3>
+        <p>With over a decade of experience serving Madurai, we deliver transparent pricing, prompt service, and lasting solutions. Our certified technicians ensure your comfort with reliable workmanship and genuine parts.</p>
+        <p>We understand the local climate challenges and provide customized cooling solutions that work efficiently in Tamil Nadu's weather conditions. Our commitment to quality service has made us the preferred choice for thousands of satisfied customers.</p>
+        <p>From emergency repairs to scheduled maintenance, we're available when you need us most with upfront pricing and no hidden charges.</p>
+      </div>
+      <div class="about-image">
+        <img src="../assets/img 2.webp" alt="Professional Service" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section services-section glass-section">
+    <h2 style="text-align:center;margin-bottom:40px;font-size:32px">Who We Are</h2>
+    <div class="about-container">
+      <div class="about-content">
+        <h3>Madurai's Premier AC Service Provider</h3>
+        <p>Annai Air Conditioner is Madurai's trusted AC service provider, committed to excellence in every installation and repair. Our skilled technicians prioritize customer satisfaction through professional service and dependable solutions for homes and businesses.</p>
+        <p>Founded with a vision to provide reliable cooling solutions, we've grown from a small local business to Madurai's most trusted AC service company. Our team of certified professionals brings years of experience and technical expertise to every job.</p>
+        <p>We believe in building long-term relationships with our customers through honest communication, quality workmanship, and exceptional after-service support.</p>
+      </div>
+      <div class="about-image">
+        <img src="../assets/img 3.jpg" alt="Our Team" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section services-section glass-section">
+    <h2 style="text-align:center;margin-bottom:40px;font-size:32px">Services We Offer</h2>
+    <div class="about-container">
+      <div class="about-content">
+        <h3>Complete AC Solutions</h3>
+        <p>From new installations to emergency repairs, we provide comprehensive air conditioning services designed to keep your space comfortable year-round.</p>
+        <ul style="list-style:none;padding:0;margin:20px 0">
+          <li style="padding:8px 0;color:var(--muted)">• Professional AC Installation & Setup</li>
+          <li style="padding:8px 0;color:var(--muted)">• Expert Repair & Troubleshooting</li>
+          <li style="padding:8px 0;color:var(--muted)">• Preventive Maintenance Programs</li>
+          <li style="padding:8px 0;color:var(--muted)">• Performance Inspection & Optimization</li>
+          <li style="padding:8px 0;color:var(--muted)">• Gas Refilling & Leak Detection</li>
+          <li style="padding:8px 0;color:var(--muted)">• Deep Cleaning & Sanitization</li>
+        </ul>
+        <p>All services come with warranty coverage and our commitment to using only genuine parts and industry-standard tools.</p>
+      </div>
+      <div class="about-image">
+        <img src="../assets/img 4.jpg" alt="AC Services" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery-section glass-section">
+    <h2 style="text-align:center">Work We Done</h2>
+    <div class="gallery-scroll">
+      <div class="gallery-track">
+        <img class="gallery-thumb" src="../assets/img1.jpg" alt="Gallery 1">
+        <img class="gallery-thumb" src="../assets/img 2.webp" alt="Gallery 2">
+        <img class="gallery-thumb" src="../assets/img 3.jpg" alt="Gallery 3">
+        <img class="gallery-thumb" src="../assets/img 4.jpg" alt="Gallery 4">
+        <img class="gallery-thumb" src="../assets/img1.jpg" alt="Gallery 1">
+        <img class="gallery-thumb" src="../assets/img 2.webp" alt="Gallery 2">
+        <img class="gallery-thumb" src="../assets/img 3.jpg" alt="Gallery 3">
+        <img class="gallery-thumb" src="../assets/img 4.jpg" alt="Gallery 4">
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:20px">
+      <a class="btn btn-ghost" href="../public/gallery.html">See more</a>
+    </div>
+  </section>
+
+  <section class="section reviews-section glass-section" aria-labelledby="reviews">
+    <h2 id="reviews" style="text-align:center;margin-bottom:32px;color:#111;font-size:32px">Testimonials</h2>
+    <div class="reviews-container">
+      <div class="reviews-scroll">
+        <div class="reviews-track">
+          <div class="review-item">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0">R</div>
+            <div><strong>Rajesh Kumar</strong> • ★★★★★<p style="margin:6px 0;color:var(--muted)">Excellent service! Fixed my AC in no time.</p></div>
+          </div>
+          <div class="review-item">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0">P</div>
+            <div><strong>Priya Sharma</strong> • ★★★★★<p style="margin:6px 0;color:var(--muted)">Best AC service in Madurai. Quick response!</p></div>
+          </div>
+          <div class="review-item">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0">M</div>
+            <div><strong>Muthu Vel</strong> • ★★★★★<p style="margin:6px 0;color:var(--muted)">Highly recommend! Perfect installation work.</p></div>
+          </div>
+          <div class="review-item">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0">S</div>
+            <div><strong>Santhosh Raj</strong> • ★★★★★<p style="margin:6px 0;color:var(--muted)">Great work! Very satisfied with the service.</p></div>
+          </div>
+          <div class="review-item">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0">A</div>
+            <div><strong>Anitha Devi</strong> • ★★★★★<p style="margin:6px 0;color:var(--muted)">Professional team and affordable pricing.</p></div>
+          </div>
+          <div class="review-item">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0">R</div>
+            <div><strong>Rajesh Kumar</strong> • ★★★★★<p style="margin:6px 0;color:var(--muted)">Excellent service! Fixed my AC in no time.</p></div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px">
+        <a class="btn btn-primary" href="../public/reviews.html">Add Review</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between">
+      <div style="max-width:360px">
+        <h3>Get in touch</h3>
+        <p>Phone: +91 99001 12233<br>WhatsApp: +91 99001 12233</p>
+        <p>Office: Madurai — Annai Air Conditioner Works Pvt Ltd</p>
+        <div class="social-links">
+          <a href="https://wa.me/919900112233" target="_blank" class="whatsapp" title="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/annaiac" target="_blank" class="instagram" title="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com/annaiac" target="_blank" class="facebook" title="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>Locations</h3>
+        <p>Madurai city, Nearby industrial area</p>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul style="list-style:none;padding:0;margin:8px 0">
+          <li style="margin:4px 0"><a href="#home">Home</a></li>
+          <li style="margin:4px 0"><a href="#about">About</a></li>
+          <li style="margin:4px 0"><a href="#services">Services</a></li>
+          <li style="margin:4px 0"><a href="../public/gallery.html">Gallery</a></li>
+          <li style="margin:4px 0"><a href="../public/reviews.html">Reviews</a></li>
+          <li style="margin:4px 0"><a href="../public/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+@keyframes rotateIn{0%{transform:rotate(-90deg) scale(0)}100%{transform:rotate(0deg) scale(1)}}
+@keyframes rotateOut{0%{transform:rotate(0deg) scale(1)}100%{transform:rotate(-90deg) scale(0)}}
+.contact-menu{position:fixed;bottom:20px;right:20px;z-index:1000}
+.contact-toggle{width:56px;height:56px;background:#0b6e4f;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);cursor:pointer;transition:transform 0.2s}
+.contact-options{position:absolute;bottom:70px;right:0;display:none;flex-direction:column;gap:12px}
+.contact-options.show{display:flex}
+.contact-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);text-decoration:none}
+.contact-btn.animate-in{animation:rotateIn 0.4s ease}
+.contact-btn.animate-out{animation:rotateOut 0.4s ease}
+.whatsapp-btn{background:#25D366}
+.phone-btn{background:#ff6b00}
+</style>
+<div class="contact-menu">
+  <div class="contact-toggle" onclick="toggleMenu()">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </div>
+  <div class="contact-options" id="contactOptions">
+    <a href="https://wa.me/919900112233" target="_blank" class="contact-btn whatsapp-btn" id="whatsappBtn">
+      <img src="../assets/icons/whatsapp.svg" alt="WhatsApp" style="width:28px;height:28px">
+    </a>
+    <a href="tel:+919900112233" class="contact-btn phone-btn" id="phoneBtn">
+      <img src="../assets/icons/phone.svg" alt="Call" style="width:24px;height:24px">
+    </a>
+  </div>
+</div>
+<script>
+function toggleMenu(){
+  const opts=document.getElementById('contactOptions');
+  const wa=document.getElementById('whatsappBtn');
+  const ph=document.getElementById('phoneBtn');
+  if(opts.classList.contains('show')){
+    wa.className='contact-btn whatsapp-btn animate-out';
+    ph.className='contact-btn phone-btn animate-out';
+    setTimeout(()=>opts.classList.remove('show'),400);
+  }else{
+    opts.classList.add('show');
+    wa.className='contact-btn whatsapp-btn animate-in';
+    ph.className='contact-btn phone-btn animate-in';
+  }
+}
+</script>
+
+<script src="../src/js/script.js"></script>
+<script>
+function toggleMobileMenu(){
+  const nav = document.getElementById('navMenu');
+  nav.classList.toggle('mobile-open');
+}
+</script>
+</body>
+</html>
