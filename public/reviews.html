@@ -10,18 +10,38 @@
 <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button></div></header>
 
 <main class="container">
-  <h1>Reviews</h1>
-  <p>Only top-rated reviews will be shown on the home preview. Submit your review below — reviews are saved locally for this demo.</p>
+  <div class="reviews-container">
+    <h1>Customer Reviews</h1>
+    <p class="reviews-subtitle">Only top-rated reviews will be shown on the home preview. Submit your review below — reviews are saved locally for this demo.</p>
 
-  <form id="rform">
-    <label>Name<input id="rname" required></label>
-    <label>Rating (1-5)<input id="rrate" type="number" min="1" max="5" required></label>
-    <label>Review<textarea id="rtext" rows="4" required></textarea></label>
-    <div style="margin-top:8px"><button class="btn btn-primary" type="submit">Submit Review</button></div>
-  </form>
+    <form id="rform" class="review-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input id="rname" class="review-input" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Rating</label>
+          <select id="rrate" class="review-input rating-select" required>
+            <option value="">Rate us</option>
+            <option value="5">★★★★★ Excellent</option>
+            <option value="4">★★★★☆ Very Good</option>
+            <option value="3">★★★☆☆ Good</option>
+            <option value="2">★★☆☆☆ Fair</option>
+            <option value="1">★☆☆☆☆ Poor</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Your Review</label>
+        <textarea id="rtext" class="review-input review-textarea" placeholder="Share your experience with our AC services..." rows="4" required></textarea>
+      </div>
+      <button class="review-submit" type="submit">Submit Review</button>
+    </form>
 
-  <h2 style="margin-top:18px">All Reviews</h2>
-  <div id="list"></div>
+    <h3>All Reviews</h3>
+    <div id="list" class="reviews-list"></div>
+  </div>
 </main>
 
 <footer class="footer">
@@ -121,7 +141,7 @@ function loadReviews(){
   list.innerHTML = '';
   arr.slice().reverse().forEach(r=>{
     const d = document.createElement('div'); d.className='review-item';
-    d.innerHTML = '<div style="width:44px;height:44px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700">'+r.name.charAt(0)+'</div><div><strong>'+r.name+'</strong> • '+'★'.repeat(r.rating)+'<p style="margin:6px 0;color:var(--muted)">'+r.text+'</p></div>';
+    d.innerHTML = '<div class="review-avatar">'+r.name.charAt(0)+'</div><div class="review-content"><div class="review-header"><strong class="review-author">'+r.name+'</strong><span class="review-rating">'+'★'.repeat(r.rating)+'</span></div><p class="review-text">'+r.text+'</p></div>';
     list.appendChild(d);
   });
 }
