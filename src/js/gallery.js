@@ -1,15 +1,23 @@
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.gallery-thumb').forEach(img=>{
-    img.addEventListener('click', function(){
-      const src = this.dataset.src;
-      const overlay = document.createElement('div');
-      overlay.style= 'position:fixed;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:1000';
-      const big = document.createElement('img');
-      big.src = src;
-      big.style = 'max-width:90%;max-height:90%;border-radius:8px';
-      overlay.appendChild(big);
-      overlay.addEventListener('click', ()=>overlay.remove());
-      document.body.appendChild(overlay);
-    });
-  });
+function toggleMobileMenu(){
+  const nav = document.getElementById('navMenu');
+  nav.classList.toggle('mobile-open');
+}
+
+// Floating contact button
+const mainBtn = document.getElementById('mainContactBtn');
+const options = document.getElementById('contactOptions');
+
+mainBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  options.classList.toggle('show');
+  mainBtn.classList.toggle('active');
+});
+
+document.addEventListener('click', () => {
+  options.classList.remove('show');
+  mainBtn.classList.remove('active');
+});
+
+options.addEventListener('click', (e) => {
+  e.stopPropagation();
 });

@@ -1,0 +1,33 @@
+<!-- CORRECTED HERO SECTION - NO CLIPPING -->
+<section class="hero glass-section">
+  <div class="hero-content">
+    <h1>Annai Air Conditioner</h1>
+    <p class="hero-description">Professional AC installation, repair, and maintenance services for homes and businesses. Expert technicians, reliable solutions, and guaranteed comfort all year round.</p>
+  </div>
+  
+  <!-- FIXED: Form wrapper with proper flexbox structure -->
+  <div class="hero-form-wrapper">
+    <div class="hero-form-card">
+      <h3>Quick Book — Free Phone Diagnosis</h3>
+      <form id="quickBook" class="booking-form">
+        <input class="form-input" type="text" name="name" placeholder="Your Name" required>
+        <input class="form-input" type="tel" name="phone" placeholder="Your Phone" required>
+        <select class="form-input" name="service" required>
+          <option value="">Select a Service</option>
+          <option value="installation">AC Installation</option>
+          <option value="repair">AC Repair</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="gas-refill">Gas Refilling</option>
+        </select>
+        
+        <!-- FIXED: Proper button wrapper with flexbox -->
+        <div class="form-actions">
+          <button class="btn-book" type="submit">Book Now</button>
+          <button class="btn-reset" type="button" onclick="document.getElementById('quickBook').reset()">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <p class="hero-tagline">Fast, Reliable AC Service — Quick Fixes. Long-Lasting Cooling</p>
+</section>

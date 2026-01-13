@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <title>Contact Us — Annai AC Works</title>
 <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body style="position:relative">
-<div style="position:fixed;top:-5%;left:0;width:100vw;height:110vh;background-image:url('../assets/icons/logo.jpg');background-size:contain;background-position:center top;background-repeat:no-repeat;opacity:0.12;filter:blur(1.5px);z-index:-1;pointer-events:none"></div>
+<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-image:url('../assets/icons/logo.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0.22;z-index:-1;pointer-events:none"></div>
 <header class="header">
   <div class="container nav">
     <div class="brand">
@@ -40,7 +40,7 @@
             </svg>
             <h3 style="margin:0;color:#0b6e4f">Call Us</h3>
           </div>
-          <p style="margin:0;color:var(--text);font-weight:500">+91 99001 12233</p>
+          <p style="margin:0;color:var(--text);font-weight:500">+91 98421 70448<br>+91 98421 75448</p>
         </div>
         
         <div class="contact-info-card" style="animation-delay:0.2s">
@@ -72,7 +72,7 @@
             </svg>
             <h3 style="margin:0;color:#0b6e4f">Office</h3>
           </div>
-          <p style="margin:0;color:var(--text);font-weight:500">Madurai, Tamil Nadu<br>Annai Air Conditioner Works</p>
+          <p style="margin:0;color:var(--text);font-weight:500">Annai Air Condition<br>D.No: 36A, Vivekananda Nagar,<br>Surveyor Colony, Madurai – 625007</p>
         </div>
       </div>
     </div>
@@ -84,8 +84,10 @@
     <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between">
       <div style="max-width:360px">
         <h3>Get in touch</h3>
-        <p>Phone: +91 99001 12233<br>WhatsApp: +91 99001 12233</p>
-        <p>Office: Madurai — Annai Air Conditioner Works Pvt Ltd</p>
+        <div class="contact-info">
+          <p><strong>Phone:</strong><br>+91 98421 70448<br>+91 98421 75448</p>
+          <p><strong>Office:</strong><br>Annai Air Condition<br>D.No: 36A, Vivekananda Nagar,<br>Surveyor Colony, Madurai – 625007</p>
+        </div>
         <div class="social-links">
           <a href="https://wa.me/919900112233" target="_blank" class="whatsapp" title="WhatsApp">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -105,12 +107,18 @@
         </div>
       </div>
       <div>
-        <h3>Locations</h3>
-        <p>Madurai city, Nearby industrial area</p>
+        <h3>Why Choose Us</h3>
+        <ul style="list-style:none;padding:0;margin:8px 0">
+          <li style="margin:4px 0">• 10+ Years Service Experience</li>
+          <li style="margin:4px 0">• Expert AC Technicians</li>
+          <li style="margin:4px 0">• Genuine Spare Parts</li>
+          <li style="margin:4px 0">• Same Day Service Support</li>
+          <li style="margin:4px 0">• 24/7 Phone Assistance</li>
+        </ul>
       </div>
       <div>
         <h3>Quick links</h3>
-        <ul style="list-style:none;padding:0 8px;margin:8px 0">
+        <ul style="list-style:none;padding:0;margin:8px 0">
           <li style="margin:4px 0"><a href="../public/index.html">Home</a></li>
           <li style="margin:4px 0"><a href="../public/index.html#about">About</a></li>
           <li style="margin:4px 0"><a href="../public/index.html#services">Services</a></li>
@@ -155,6 +163,11 @@
   </div>
 </div>
 <script>
+function toggleMobileMenu(){
+  const nav = document.getElementById('navMenu');
+  nav.classList.toggle('mobile-open');
+}
+
 function toggleMenu(){
   const opts=document.getElementById('contactOptions');
   const wa=document.getElementById('whatsappBtn');

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annai AC Works — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+
+<!-- Fixed Background Layer -->
+<div class="fixed-bg"></div>
+
+<!-- Header Navigation -->
+<header class="header">
+  <div class="nav-container">
+    <div class="brand">
+      <img src="../assets/icons/logo.jpg" alt="Annai AC Works logo">
+    </div>
+    <nav class="navlinks" id="navMenu">
+      <a href="../public/index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="../public/gallery.html">Gallery</a>
+      <a href="../public/reviews.html">Reviews</a>
+      <a href="../public/contact.html">Contact</a>
+    </nav>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="main-container">
+
+  <!-- Hero Section -->
+  <section class="hero-section glass-section">
+    <div class="hero-content">
+      <h1>Annai Air Conditioner</h1>
+      <p>Professional AC installation, repair, and maintenance services for homes and businesses. Expert technicians, reliable solutions, and guaranteed comfort all year round.</p>
+    </div>
+    <div class="hero-form">
+      <h3>Quick Book — Free Phone Diagnosis</h3>
+      <form id="quickBook">
+        <input class="form-input" type="text" name="name" placeholder="Your Name" required>
+        <input class="form-input" type="tel" name="phone" placeholder="Your Phone" required>
+        <select class="form-input" name="service" required>
+          <option value="">Select a Service</option>
+          <option value="installation">AC Installation</option>
+          <option value="repair">AC Repair</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="gas-refill">Gas Refilling</option>
+        </select>
+        <div class="form-buttons">
+          <button class="btn-book" type="submit">Book Now</button>
+          <button class="btn-reset" type="button" onclick="document.getElementById('quickBook').reset()">Reset</button>
+        </div>
+      </form>
+    </div>
+    <p class="hero-tagline">Fast, Reliable AC Service — Quick Fixes. Long-Lasting Cooling</p>
+  </section>
+
+  <!-- Info Cards Section -->
+  <section class="info-section">
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Working Hours</h4>
+        <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: Emergency only</p>
+      </div>
+      <div class="info-card">
+        <h4>Inspection Charges</h4>
+        <p>Starting at ₹399<br>Includes phone diagnosis & onsite quote</p>
+      </div>
+      <div class="info-card">
+        <h4>Contact</h4>
+        <p>Call: +91 99001 12233<br>WhatsApp: +91 99001 12233</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="content-section glass-section" id="about">
+    <h2>About Us</h2>
+    <div class="content-grid">
+      <div class="content-text">
+        <h3>Annai Air Conditioner</h3>
+        <p>Annai Air Conditioner is a trusted provider of air conditioning installation, servicing, and maintenance solutions for homes and businesses. We focus on delivering reliable cooling, professional workmanship, and long-lasting performance tailored to customer needs.</p>
+        <p>With experienced technicians and a commitment to quality, we handle everything from new AC installations and gas refilling to deep cleaning, repair, and annual maintenance contracts. Every service is carried out using standard tools, safety guidelines, and industry best practices.</p>
+        <p>Our goal is simple: to ensure comfort, energy efficiency, and peace of mind for our customers through dependable and transparent service.</p>
+      </div>
+      <div class="content-image">
+        <img src="../assets/img1.jpg" alt="AC Service">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="content-section glass-section" id="services">
+    <h2>Why Choose Us</h2>
+    <div class="content-grid">
+      <div class="content-text">
+        <h3>Trusted Local Expertise</h3>
+        <p>With over a decade of experience serving Madurai, we deliver transparent pricing, prompt service, and lasting solutions. Our certified technicians ensure your comfort with reliable workmanship and genuine parts.</p>
+        <p>We understand the local climate challenges and provide customized cooling solutions that work efficiently in Tamil Nadu's weather conditions. Our commitment to quality service has made us the preferred choice for thousands of satisfied customers.</p>
+        <p>From emergency repairs to scheduled maintenance, we're available when you need us most with upfront pricing and no hidden charges.</p>
+      </div>
+      <div class="content-image">
+        <img src="../assets/img 2.webp" alt="Professional Service">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section glass-section">
+    <h2>Work We Done</h2>
+    <div class="gallery-container">
+      <div class="gallery-track">
+        <img src="../assets/img1.jpg" alt="Gallery 1">
+        <img src="../assets/img 2.webp" alt="Gallery 2">
+        <img src="../assets/img 3.jpg" alt="Gallery 3">
+        <img src="../assets/img 4.jpg" alt="Gallery 4">
+        <img src="../assets/img1.jpg" alt="Gallery 1">
+        <img src="../assets/img 2.webp" alt="Gallery 2">
+        <img src="../assets/img 3.jpg" alt="Gallery 3">
+        <img src="../assets/img 4.jpg" alt="Gallery 4">
+      </div>
+    </div>
+    <div class="gallery-link">
+      <a class="btn-ghost" href="../public/gallery.html">See more</a>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section glass-section">
+    <h2>Testimonials</h2>
+    <div class="reviews-container">
+      <div class="reviews-track">
+        <div class="review-item">
+          <div class="review-avatar">R</div>
+          <div class="review-content">
+            <strong>Rajesh Kumar</strong> • ★★★★★
+            <p>Excellent service! Fixed my AC in no time.</p>
+          </div>
+        </div>
+        <div class="review-item">
+          <div class="review-avatar">P</div>
+          <div class="review-content">
+            <strong>Priya Sharma</strong> • ★★★★★
+            <p>Best AC service in Madurai. Quick response!</p>
+          </div>
+        </div>
+        <div class="review-item">
+          <div class="review-avatar">M</div>
+          <div class="review-content">
+            <strong>Muthu Vel</strong> • ★★★★★
+            <p>Highly recommend! Perfect installation work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-link">
+      <a class="btn-primary" href="../public/reviews.html">Add Review</a>
+    </div>
+  </section>
+
+  <!-- Brands & Reputation Section -->
+  <section class="brands-section glass-section">
+    <h2>Brands & Reputation</h2>
+    <div class="brands-grid">
+      <div class="brands-column">
+        <h3>Trusted Brands</h3>
+        <p>We work with leading AC manufacturers to ensure quality and reliability</p>
+        <div class="brands-logos">
+          <img src="../assets/icons/daikin.png" alt="Daikin AC Brand">
+          <img src="../assets/icons/mitsubishi.png" alt="Mitsubishi AC Brand">
+        </div>
+      </div>
+      <div class="reputation-column">
+        <h3>Our Reputation</h3>
+        <p>Our reputation is built on trust, performance, and commitment to delivering excellence in every service</p>
+        <div class="reputation-stats">
+          <div class="stat-item">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Emergency Service</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Get in touch</h3>
+        <p>Phone: +91 99001 12233<br>WhatsApp: +91 99001 12233</p>
+        <p>Office: Madurai — Annai Air Conditioner Works Pvt Ltd</p>
+      </div>
+      <div class="footer-section">
+        <h3>Locations</h3>
+        <p>Madurai city, Nearby industrial area</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="../public/gallery.html">Gallery</a></li>
+          <li><a href="../public/reviews.html">Reviews</a></li>
+          <li><a href="../public/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../src/js/script.js"></script>
+<script>
+function toggleMobileMenu(){
+  const nav = document.getElementById('navMenu');
+  nav.classList.toggle('mobile-open');
+}
+</script>
+</body>
+</html>

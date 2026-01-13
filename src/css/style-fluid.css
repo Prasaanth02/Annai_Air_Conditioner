@@ -1,0 +1,778 @@
+/* ==========================================================================
+   FLUID RESPONSIVE CSS - BREAKPOINT DRIVEN ARCHITECTURE
+   ========================================================================== */
+
+/* CSS Custom Properties for Consistent Design System */
+:root {
+  --accent: #0b6e4f;
+  --accent-2: #ff6b00;
+  --muted: #6b7280;
+  --text: #1f2937;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  
+  /* Fluid Spacing Scale */
+  --space-xs: clamp(0.5rem, 2vw, 1rem);
+  --space-sm: clamp(1rem, 3vw, 1.5rem);
+  --space-md: clamp(1.5rem, 4vw, 2.5rem);
+  --space-lg: clamp(2rem, 6vw, 4rem);
+  --space-xl: clamp(3rem, 8vw, 6rem);
+  
+  /* Fluid Typography Scale */
+  --text-xs: clamp(0.75rem, 2vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 2.5vw, 1rem);
+  --text-base: clamp(1rem, 3vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 3.5vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 4vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 5vw, 2rem);
+  --text-3xl: clamp(2rem, 6vw, 3rem);
+  --text-4xl: clamp(2.5rem, 8vw, 4rem);
+}
+
+/* ==========================================================================
+   GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: var(--text-base);
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Responsive Images */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   FIXED BACKGROUND LAYER
+   ========================================================================== */
+
+.fixed-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../assets/icons/logo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.08;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+/* ==========================================================================
+   GLASS MORPHISM SYSTEM
+   ========================================================================== */
+
+.glass-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: clamp(1rem, 3vw, 1.5rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   HEADER NAVIGATION - MOBILE FIRST
+   ========================================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #000000;
+  z-index: 100;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm);
+  max-width: 100%;
+}
+
+.brand img {
+  width: clamp(3rem, 8vw, 4.5rem);
+  height: clamp(3rem, 8vw, 4.5rem);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+}
+
+/* Mobile Navigation */
+.navlinks {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #000000;
+  padding: var(--space-md);
+  gap: var(--space-sm);
+}
+
+.navlinks.mobile-open {
+  display: flex;
+}
+
+.navlinks a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-base);
+  transition: color 0.3s ease;
+}
+
+.navlinks a:hover {
+  color: var(--accent-2);
+}
+
+.mobile-menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: var(--text-xl);
+  cursor: pointer;
+  padding: var(--space-xs);
+}
+
+/* ==========================================================================
+   MAIN CONTAINER - FLUID GRID SYSTEM
+   ========================================================================== */
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-md);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   HERO SECTION - MOBILE FIRST FLEXBOX
+   ========================================================================== */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-lg);
+  gap: var(--space-lg);
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 100%;
+}
+
+.hero-content h1 {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: var(--text-lg);
+  color: #333;
+  line-height: 1.7;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.hero-form {
+  width: 100%;
+  max-width: 28rem;
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: clamp(1rem, 3vw, 1.5rem);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.hero-form h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: var(--text-base);
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.btn-book, .btn-reset {
+  padding: var(--space-sm);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-book {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-book:hover {
+  background: #0a5d42;
+}
+
+.btn-reset {
+  background: #f7fafc;
+  color: #4a5568;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-reset:hover {
+  background: #edf2f7;
+}
+
+.hero-tagline {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--text-sm);
+  color: #555;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* ==========================================================================
+   INFO CARDS SECTION - CSS GRID
+   ========================================================================== */
+
+.info-section {
+  padding: var(--space-lg) 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.info-card {
+  background: linear-gradient(180deg, #fff, #fbfffb);
+  padding: var(--space-md);
+  border-radius: clamp(0.5rem, 2vw, 1rem);
+  text-align: center;
+  transition: transform 0.3s;
+  border: 1px solid rgba(11, 110, 79, 0.1);
+}
+
+.info-card:hover {
+  transform: translateY(-0.375rem);
+}
+
+.info-card h4 {
+  color: var(--accent);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.info-card p {
+  font-size: var(--text-base);
+  color: var(--text);
+}
+
+/* ==========================================================================
+   CONTENT SECTIONS - FLEXIBLE GRID LAYOUT
+   ========================================================================== */
+
+.content-section {
+  padding: var(--space-xl);
+  margin: var(--space-lg) 0;
+}
+
+.content-section h2 {
+  font-size: var(--text-3xl);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.content-text h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-md);
+  color: var(--text);
+}
+
+.content-text p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+  font-size: var(--text-base);
+}
+
+.content-image {
+  width: 100%;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  border-radius: clamp(0.75rem, 2vw, 1rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   GALLERY SECTION - HORIZONTAL SCROLL
+   ========================================================================== */
+
+.gallery-section {
+  padding: var(--space-xl);
+  margin: var(--space-lg) 0;
+}
+
+.gallery-section h2 {
+  font-size: var(--text-3xl);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+}
+
+.gallery-container {
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-md) 0;
+}
+
+.gallery-track {
+  display: flex;
+  gap: var(--space-md);
+  animation: galleryScroll 25s linear infinite;
+}
+
+.gallery-track img {
+  width: clamp(12rem, 30vw, 18rem);
+  height: clamp(8rem, 20vw, 12rem);
+  object-fit: cover;
+  border-radius: clamp(0.75rem, 2vw, 1rem);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.gallery-track img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-link {
+  text-align: center;
+  margin-top: var(--space-md);
+}
+
+.btn-ghost {
+  padding: var(--space-sm) var(--space-md);
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-ghost:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   REVIEWS SECTION - ANIMATED TESTIMONIALS
+   ========================================================================== */
+
+.reviews-section {
+  padding: var(--space-xl);
+  margin: var(--space-lg) 0;
+}
+
+.reviews-section h2 {
+  font-size: var(--text-3xl);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+}
+
+.reviews-container {
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-md) 0;
+}
+
+.reviews-track {
+  display: flex;
+  gap: var(--space-md);
+  animation: scrollLeft 15s linear infinite;
+}
+
+.review-item {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  min-width: clamp(18rem, 50vw, 22rem);
+  flex-shrink: 0;
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: clamp(0.75rem, 2vw, 1rem);
+}
+
+.review-avatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.review-content strong {
+  font-size: var(--text-base);
+  color: var(--text);
+}
+
+.review-content p {
+  margin-top: var(--space-xs);
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.reviews-link {
+  text-align: center;
+  margin-top: var(--space-md);
+}
+
+.btn-primary {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0a5d42;
+}
+
+/* ==========================================================================
+   BRANDS & REPUTATION SECTION - RESPONSIVE GRID
+   ========================================================================== */
+
+.brands-section {
+  padding: var(--space-xl);
+  margin: var(--space-lg) 0;
+}
+
+.brands-section h2 {
+  font-size: var(--text-3xl);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.brands-column, .reputation-column {
+  text-align: center;
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: clamp(1rem, 3vw, 1.5rem);
+}
+
+.brands-column h3, .reputation-column h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-md);
+  color: var(--text);
+}
+
+.brands-column p, .reputation-column p {
+  color: var(--muted);
+  margin-bottom: var(--space-md);
+  font-size: var(--text-base);
+}
+
+.brands-logos {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.brands-logos img {
+  width: clamp(4rem, 15vw, 8rem);
+  height: clamp(3rem, 10vw, 5rem);
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: var(--space-sm);
+  transition: transform 0.3s;
+}
+
+.brands-logos img:hover {
+  transform: scale(1.05);
+}
+
+.reputation-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.stat-item {
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  transition: transform 0.3s;
+}
+
+.stat-item:hover {
+  transform: translateY(-0.25rem);
+}
+
+.stat-number {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   FOOTER - RESPONSIVE GRID
+   ========================================================================== */
+
+.footer {
+  background: #000000;
+  color: white;
+  padding: var(--space-xl) 0;
+  margin-top: var(--space-xl);
+}
+
+.footer-container {
+  padding: 0 var(--space-md);
+  max-width: 100%;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.footer-section h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-md);
+  font-weight: 600;
+}
+
+.footer-section p {
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+  font-size: var(--text-base);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  padding: var(--space-xs) 0;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: var(--accent-2);
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@keyframes galleryScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   BREAKPOINT RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Tablets: >= 768px */
+@media (min-width: 48rem) {
+  .nav-container {
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  .navlinks {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    padding: 0;
+    gap: var(--space-lg);
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+  }
+  
+  .hero-section {
+    flex-direction: row;
+    text-align: left;
+    padding: var(--space-xl);
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .hero-form {
+    flex: 0 0 28rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .brands-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Laptops: >= 1024px */
+@media (min-width: 64rem) {
+  .main-container {
+    max-width: 75rem;
+    padding: var(--space-lg);
+  }
+  
+  .hero-section {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .content-section {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .gallery-section {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .reviews-section {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .brands-section {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+/* Large Desktops: >= 1280px */
+@media (min-width: 80rem) {
+  .main-container {
+    max-width: 90rem;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+  }
+  
+  .content-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+}

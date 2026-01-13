@@ -1,25 +1,27 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gallery — Annai AC Works</title>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Gallery — Annai AC Works</title>
 <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body style="position:relative">
-<div style="position:fixed;top:-5%;left:0;width:100vw;height:110vh;background-image:url('../assets/icons/logo.jpg');background-size:contain;background-position:center top;background-repeat:no-repeat;opacity:0.12;filter:blur(1.5px);z-index:-1;pointer-events:none"></div>
+<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-image:url('../assets/icons/logo.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0.22;z-index:-1;pointer-events:none"></div>
 <header class="header"><div class="container nav"><div class="brand"><img src="../assets/icons/logo.jpg" alt="Annai AC Works logo"></div>
 <nav class="navlinks" id="navMenu"><a href="../public/index.html">Home</a><a href="../public/index.html#about">About</a><a href="../public/index.html#services">Services</a><a href="../public/gallery.html">Gallery</a><a href="../public/reviews.html">Reviews</a><a href="../public/contact.html">Contact</a></nav>
 <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
 </div></header>
 
 <main class="container">
-  <h1>Gallery</h1>
-  <p>Click any image to view a larger preview.</p>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:800px;margin:0 auto">
-<img class="gallery-thumb" data-src="../assets/img1.jpg" src="../assets/img1.jpg" style="width:100%;border-radius:8px" alt="Gallery 1">
-<img class="gallery-thumb" data-src="../assets/img 2.webp" src="../assets/img 2.webp" style="width:100%;border-radius:8px" alt="Gallery 2">
-<img class="gallery-thumb" data-src="../assets/img 3.jpg" src="../assets/img 3.jpg" style="width:100%;border-radius:8px" alt="Gallery 3">
-<img class="gallery-thumb" data-src="../assets/img 4.jpg" src="../assets/img 4.jpg" style="width:100%;border-radius:8px" alt="Gallery 4">
-<img class="gallery-thumb" data-src="../assets/img1.jpg" src="../assets/img1.jpg" style="width:100%;border-radius:8px" alt="Gallery 5">
-<img class="gallery-thumb" data-src="../assets/img 2.webp" src="../assets/img 2.webp" style="width:100%;border-radius:8px" alt="Gallery 6">
+  <section class="gallery-header">
+    <h1>Our Work Gallery</h1>
+    <p>Real service moments from installations, repairs, and maintenance projects.</p>
+  </section>
+  <div class="gallery-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:800px;margin:0 auto;padding:20px">
+<img class="gallery-thumb" data-src="../assets/img1.jpg" src="../assets/img1.jpg" style="width:100%;border-radius:12px;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)" alt="Gallery 1">
+<img class="gallery-thumb" data-src="../assets/img 2.webp" src="../assets/img 2.webp" style="width:100%;border-radius:12px;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)" alt="Gallery 2">
+<img class="gallery-thumb" data-src="../assets/img 3.jpg" src="../assets/img 3.jpg" style="width:100%;border-radius:12px;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)" alt="Gallery 3">
+<img class="gallery-thumb" data-src="../assets/img 4.jpg" src="../assets/img 4.jpg" style="width:100%;border-radius:12px;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)" alt="Gallery 4">
+<img class="gallery-thumb" data-src="../assets/img1.jpg" src="../assets/img1.jpg" style="width:100%;border-radius:12px;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)" alt="Gallery 5">
+<img class="gallery-thumb" data-src="../assets/img 2.webp" src="../assets/img 2.webp" style="width:100%;border-radius:12px;padding:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)" alt="Gallery 6">
 
   </div>
 </main>
@@ -29,8 +31,10 @@
     <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between">
       <div style="max-width:360px">
         <h3>Get in touch</h3>
-        <p>Phone: +91 99001 12233<br>WhatsApp: +91 99001 12233</p>
-        <p>Office: Madurai — Annai Air Conditioner Works Pvt Ltd</p>
+        <div class="contact-info">
+          <p><strong>Phone:</strong><br>+91 98421 70448<br>+91 98421 75448</p>
+          <p><strong>Office:</strong><br>Annai Air Condition<br>D.No: 36A, Vivekananda Nagar,<br>Surveyor Colony, Madurai – 625007</p>
+        </div>
         <div class="social-links">
           <a href="https://wa.me/919900112233" target="_blank" class="whatsapp" title="WhatsApp">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -50,12 +54,18 @@
         </div>
       </div>
       <div>
-        <h3>Locations</h3>
-        <p>Madurai city, Nearby industrial area</p>
+        <h3>Why Choose Us</h3>
+        <ul style="list-style:none;padding:0;margin:8px 0">
+          <li style="margin:4px 0">• 10+ Years Service Experience</li>
+          <li style="margin:4px 0">• Expert AC Technicians</li>
+          <li style="margin:4px 0">• Genuine Spare Parts</li>
+          <li style="margin:4px 0">• Same Day Service Support</li>
+          <li style="margin:4px 0">• 24/7 Phone Assistance</li>
+        </ul>
       </div>
       <div>
         <h3>Quick links</h3>
-        <ul style="list-style:none;padding:0 8px;margin:8px 0">
+        <ul style="list-style:none;padding:0;margin:8px 0">
           <li style="margin:4px 0"><a href="../public/index.html">Home</a></li>
           <li style="margin:4px 0"><a href="../public/index.html#about">About</a></li>
           <li style="margin:4px 0"><a href="../public/index.html#services">Services</a></li>
@@ -67,49 +77,26 @@
     </div>
   </div>
 </footer>
-<style>
-@keyframes rotateIn{0%{transform:rotate(-90deg) scale(0)}100%{transform:rotate(0deg) scale(1)}}
-@keyframes rotateOut{0%{transform:rotate(0deg) scale(1)}100%{transform:rotate(-90deg) scale(0)}}
-.contact-menu{position:fixed;bottom:20px;right:20px;z-index:1000}
-.contact-toggle{width:56px;height:56px;background:#0b6e4f;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);cursor:pointer;transition:transform 0.2s}
-.contact-options{position:absolute;bottom:70px;right:0;display:none;flex-direction:column;gap:12px}
-.contact-options.show{display:flex}
-.contact-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);text-decoration:none}
-.contact-btn.animate-in{animation:rotateIn 0.4s ease}
-.contact-btn.animate-out{animation:rotateOut 0.4s ease}
-.whatsapp-btn{background:#25D366}
-.phone-btn{background:#ff6b00}
-</style>
-<div class="contact-menu">
-  <div class="contact-toggle" onclick="toggleMenu()">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<div class="floating-contact">
+  <div class="contact-options" id="contactOptions">
+    <a href="https://wa.me/919900112233" class="contact-option whatsapp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+      </svg>
+    </a>
+    <a href="tel:+919842170448" class="contact-option call">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </a>
+  </div>
+  <button class="main-contact-btn" id="mainContactBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
-  </div>
-  <div class="contact-options" id="contactOptions">
-    <a href="https://wa.me/919900112233" target="_blank" class="contact-btn whatsapp-btn" id="whatsappBtn">
-      <img src="../assets/icons/whatsapp.svg" alt="WhatsApp" style="width:28px;height:28px">
-    </a>
-    <a href="tel:+919900112233" class="contact-btn phone-btn" id="phoneBtn">
-      <img src="../assets/icons/phone.svg" alt="Call" style="width:24px;height:24px">
-    </a>
-  </div>
+  </button>
 </div>
 <script>
-function toggleMenu(){
-  const opts=document.getElementById('contactOptions');
-  const wa=document.getElementById('whatsappBtn');
-  const ph=document.getElementById('phoneBtn');
-  if(opts.classList.contains('show')){
-    wa.className='contact-btn whatsapp-btn animate-out';
-    ph.className='contact-btn phone-btn animate-out';
-    setTimeout(()=>opts.classList.remove('show'),400);
-  }else{
-    opts.classList.add('show');
-    wa.className='contact-btn whatsapp-btn animate-in';
-    ph.className='contact-btn phone-btn animate-in';
-  }
-}
 function toggleMobileMenu(){
   const nav = document.getElementById('navMenu');
   nav.classList.toggle('mobile-open');

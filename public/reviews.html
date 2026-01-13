@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reviews — Annai AC Works</title>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Reviews — Annai AC Works</title>
 <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body style="position:relative">
-<div style="position:fixed;top:-5%;left:0;width:100vw;height:110vh;background-image:url('../assets/icons/logo.jpg');background-size:contain;background-position:center top;background-repeat:no-repeat;opacity:0.12;filter:blur(1.5px);z-index:-1;pointer-events:none"></div>
+<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-image:url('../assets/icons/logo.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0.22;z-index:-1;pointer-events:none"></div>
 <header class="header"><div class="container nav"><div class="brand"><img src="../assets/icons/logo.jpg" alt="Annai AC Works logo"></div>
 <nav class="navlinks" id="navMenu"><a href="../public/index.html">Home</a><a href="../public/index.html#about">About</a><a href="../public/index.html#services">Services</a><a href="../public/gallery.html">Gallery</a><a href="../public/reviews.html">Reviews</a><a href="../public/contact.html">Contact</a></nav>
 <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button></div></header>
 
 <main class="container">
   <div class="reviews-container">
-    <h1>Customer Reviews</h1>
-    <p class="reviews-subtitle">Only top-rated reviews will be shown on the home preview. Submit your review below — reviews are saved locally for this demo.</p>
+    <h1>Tell Us How We Did</h1>
+
 
     <form id="rform" class="review-form">
       <div class="form-row">
@@ -49,8 +49,10 @@
     <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between">
       <div style="max-width:360px">
         <h3>Get in touch</h3>
-        <p>Phone: +91 99001 12233<br>WhatsApp: +91 99001 12233</p>
-        <p>Office: Madurai — Annai Air Conditioner Works Pvt Ltd</p>
+        <div class="contact-info">
+          <p><strong>Phone:</strong><br>+91 98421 70448<br>+91 98421 75448</p>
+          <p><strong>Office:</strong><br>Annai Air Condition<br>D.No: 36A, Vivekananda Nagar,<br>Surveyor Colony, Madurai – 625007</p>
+        </div>
         <div class="social-links">
           <a href="https://wa.me/919900112233" target="_blank" class="whatsapp" title="WhatsApp">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -70,12 +72,18 @@
         </div>
       </div>
       <div>
-        <h3>Locations</h3>
-        <p>Madurai city, Nearby industrial area</p>
+        <h3>Why Choose Us</h3>
+        <ul style="list-style:none;padding:0;margin:8px 0">
+          <li style="margin:4px 0">• 10+ Years Service Experience</li>
+          <li style="margin:4px 0">• Expert AC Technicians</li>
+          <li style="margin:4px 0">• Genuine Spare Parts</li>
+          <li style="margin:4px 0">• Same Day Service Support</li>
+          <li style="margin:4px 0">• 24/7 Phone Assistance</li>
+        </ul>
       </div>
       <div>
         <h3>Quick links</h3>
-        <ul style="list-style:none;padding:0 8px;margin:8px 0">
+        <ul style="list-style:none;padding:0;margin:8px 0">
           <li style="margin:4px 0"><a href="../public/index.html">Home</a></li>
           <li style="margin:4px 0"><a href="../public/index.html#about">About</a></li>
           <li style="margin:4px 0"><a href="../public/index.html#services">Services</a></li>
@@ -116,6 +124,11 @@
   </div>
 </div>
 <script>
+function toggleMobileMenu(){
+  const nav = document.getElementById('navMenu');
+  nav.classList.toggle('mobile-open');
+}
+
 function toggleMenu(){
   const opts=document.getElementById('contactOptions');
   const wa=document.getElementById('whatsappBtn');
@@ -133,32 +146,4 @@ function toggleMenu(){
 </script>
 
 <script src="../src/js/reviews.js"></script>
-<script>
-// reviews handling with localStorage and showing only top-rated on home page via storage
-function loadReviews(){
-  const arr = JSON.parse(localStorage.getItem('ac_revs')||'[]');
-  const list = document.getElementById('list');
-  list.innerHTML = '';
-  arr.slice().reverse().forEach(r=>{
-    const d = document.createElement('div'); d.className='review-item';
-    d.innerHTML = '<div class="review-avatar">'+r.name.charAt(0)+'</div><div class="review-content"><div class="review-header"><strong class="review-author">'+r.name+'</strong><span class="review-rating">'+'★'.repeat(r.rating)+'</span></div><p class="review-text">'+r.text+'</p></div>';
-    list.appendChild(d);
-  });
-}
-document.getElementById('rform').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('rname').value.trim();
-  const rating = parseInt(document.getElementById('rrate').value);
-  const text = document.getElementById('rtext').value.trim();
-  if(!name||!rating||!text) return;
-  const arr = JSON.parse(localStorage.getItem('ac_revs')||'[]');
-  arr.push({name, rating, text});
-  localStorage.setItem('ac_revs', JSON.stringify(arr));
-  loadReviews();
-  alert('Thanks — your review is saved (local demo).');
-  this.reset();
-});
-// on load
-loadReviews();
-</script>
 </body></html>
